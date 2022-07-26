@@ -4,7 +4,12 @@
   
     Corrigir efeitos de som.
     Corrigir Textura do vilão.
+# Versões de Teste
 
+	O arquivo desktop-1.0-Versao-Teste.jar, contém uma versão de teste para Desktop.
+	O arquivo dist-html-Versao-Teste.zip, contém uma versão de teste para Navegador.
+	
+	
 # Explicação do jogo
 
 Neste jogo você controlará um arqueiro que precisa resgatar a princesa que foi levada para a torre pelo vilão.
