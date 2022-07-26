@@ -12,6 +12,7 @@ public class Jogo extends Game{
 	public void create () {
 		batch = new SpriteBatch();
 		font = new BitmapFont();
+		font.getData().setScale((float) 1.2);
 		this.setScreen(new MyGdxGame(this));
 	}
 	
