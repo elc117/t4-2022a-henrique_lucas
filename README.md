@@ -2,7 +2,8 @@
 
   Falta implementar:
   
-    Corrigir efeitos de som.
+    Corrigir efeitos de som;
+    Corrigir música ambiente;
     Corrigir Textura do vilão.
 # Versões de Teste
 
