@@ -27,7 +27,10 @@ public class GameScreen implements Screen {
 		Texture flechaRImg;
 		Texture chefeImg;
 		Texture barreiraImg;
-		Sound fogoSound;
+		Sound flechaAtaque;
+		Sound flechaDano;
+		Sound fogoAtaque;
+		Sound fogoDano;
 		Music gameMusic;
 		OrthographicCamera camera;
 		SpriteBatch batch;
@@ -68,8 +71,11 @@ public class GameScreen implements Screen {
 		flechaImg = new Texture(Gdx.files.internal("flecha.png"));
 		flechaRImg = new Texture(Gdx.files.internal("flecha.png"));
 		flechaLImg = new Texture(Gdx.files.internal("flechaL.png"));
-		fogoSound = Gdx.audio.newSound(Gdx.files.internal("gameMusic.mp3")); //MUDAR arquivo de audio
+		fogoAtaque = Gdx.audio.newSound(Gdx.files.internal("fogoAtaque.mp3"));
 		gameMusic = Gdx.audio.newMusic(Gdx.files.internal("gameMusic.mp3"));
+		flechaAtaque = Gdx.audio.newSound(Gdx.files.internal("flechaAtaque.mp3"));
+		flechaDano = Gdx.audio.newSound(Gdx.files.internal("flechaDano.mp3"));
+		fogoDano = Gdx.audio.newSound(Gdx.files.internal("fogoDano.mp3"));
 		
 		gameMusic.setLooping(true);
 		gameMusic.play();
@@ -189,13 +195,12 @@ public class GameScreen implements Screen {
 			fireball.x -= 200 * Gdx.graphics.getDeltaTime();
 			if(fireball.y < 54) {
 				iter.remove();
-				fogoSound.play(); //MUDAR PARA SOM do fogo
 				fireState = true;
 			}
 			if(fireball.overlaps(personagem)) {
 				vida -= 1;
 				iter.remove();
-				fogoSound.play(); //MUDAR PARA SOM do fogo
+				fogoDano.play();
 				fireState = true;
 			}
 		}
@@ -207,11 +212,11 @@ public class GameScreen implements Screen {
 			
 			
 			if(flechaPos == true){
-				fogoSound.play(); //MUDAR PARA SOM da FLecha sendo lancada
+				
 				flechaImg = flechaRImg;
 				flecha.x += 400 * Gdx.graphics.getDeltaTime();
 			}else {
-				fogoSound.play(); //MUDAR PARA SOM da FLecha sendo lancada
+				
 				flechaImg = flechaLImg;
 				flecha.x -= 400 * Gdx.graphics.getDeltaTime();
 			}
@@ -219,16 +224,16 @@ public class GameScreen implements Screen {
 				barreiraCount -= 5;
 				iter1.remove();
 				flechaOk = true;
-				fogoSound.play(); //MUDAR PARA SOM de FLecha acertanodo alvo
+				flechaDano.play(); 
 			}
 			if(flecha.x >= 800) {
 				iter1.remove();
-				fogoSound.play(); //MUDAR PARA SOM de FLecha acertanodo alvo
+				flechaDano.play();
 				flechaOk = true;
 			}
 			if(flecha.x <= 0) {
 				iter1.remove();
-				fogoSound.play(); //MUDAR PARA SOM de FLecha acertanodo alvo
+				flechaDano.play();
 				flechaOk = true;
 			}
 			
@@ -246,6 +251,7 @@ private void atirar() {
 		flecha.y = personagem.y + 40;
 		flechas.add(flecha);
 		flechaPos = ladoState;
+		flechaAtaque.play();
 		flechaTime = TimeUtils.nanoTime();
 	}
 
@@ -275,13 +281,14 @@ private void fire() {
 		yi = chefe.y;
 		xf = personagem.x;
 		yf = personagem.y;
+		fogoAtaque.play();
 		fireTime = TimeUtils.nanoTime();
 }
 	
 	
 	@Override
 	public void dispose() {
-		fogoSound.dispose();
+		//fogoAtaque.dispose();
 		fireballImg.dispose();
 		gameMusic.dispose();
 		cenario.dispose();
