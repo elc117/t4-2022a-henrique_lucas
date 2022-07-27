@@ -1,10 +1,5 @@
 # Status: Trabalho em andamento (WIP)
 
-  Falta implementar:
-  
-    Corrigir efeitos de som;
-    Corrigir música ambiente;
-    Corrigir Textura do vilão.
 # Versões de Teste
 
 	O arquivo desktop-1.0-Versao-Teste.jar, contém uma versão de teste para Desktop.
@@ -145,3 +140,11 @@ private void jump() {
 ```
   
   
+# Fontes
+
+###### Texturas:
+
+[Fireball](https://pngset.com/download-free-png-cuntq)
+[Elementos do Cenário](https://cainos.itch.io/pixel-art-platformer-village-props)
+
+###### Sons:
