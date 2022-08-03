@@ -146,5 +146,10 @@ private void jump() {
 
 [Fireball](https://pngset.com/download-free-png-cuntq)
 [Elementos do Cenário](https://cainos.itch.io/pixel-art-platformer-village-props)
-
+[Ataque de flecha](https://www.myinstants.com/pt/instant/flecha-2-98133/)
+[Dano de flecha](https://www.myinstants.com/pt/instant/flecha-29117/)
+[Ataque de fogo](https://www.myinstants.com/pt/instant/small-fireball-11092/)
+[Dano de fogo](https://www.myinstants.com/pt/instant/fireballswoosh/)
+[Música](https://www.youtube.com/watch?v=osXHdy2W25g&feature=youtu.be&ab_channel=MusiCat%E2%80%A2M%C3%9ASICASSEMCOPYRIGHT)
+[Mago e arqueiro](http://pixelartmaker.com/offshoot/5680d58ebafdf15)
 ###### Sons:
