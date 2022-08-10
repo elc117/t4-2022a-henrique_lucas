@@ -1,4 +1,4 @@
-# Status: Trabalho em andamento (WIP)
+# Status: Trabalho em andamento
 
 # Versões de Teste
 
